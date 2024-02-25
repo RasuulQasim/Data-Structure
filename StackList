@@ -1,0 +1,37 @@
+package D_A;
+
+import list.Node;
+
+public class StackList {
+	
+	private Node head;
+	@SuppressWarnings("unused")
+	private Node tail;
+	
+	public StackList(Node node)
+	{
+		this.head = node;
+		
+		this.tail = head;
+	
+	}
+	
+	
+	public void push(Node item) {
+		item.next=head;
+		head=item;
+		
+	}
+	
+	public void pop() {
+		if(head!=null) {
+			System.out.println(head.data);
+			head=head.next;
+		
+		}
+		
+		
+	}
+	
+
+}
