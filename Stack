@@ -1,0 +1,46 @@
+package D_A;
+
+public class Stack {
+	
+	private int size;
+	private int counter;
+	
+	private int data[];
+	
+	public Stack(int size,int couniter) {
+		
+		this.size=size;
+		this.counter=couniter;
+		data=new int[this.size];
+		
+	}
+	
+	
+	public void push(int data) {
+		if(counter<size)
+		this.data[counter++]=data;
+		else
+			System.out.println("Stack Fully");
+	}
+	
+	
+	
+	public void pop() {
+	counter--;
+		if(counter<0) {
+			System.out.println("Stack is Empty");
+		
+		}
+		else
+		System.out.println(data[counter]);
+		
+		
+		
+		
+	}
+	
+	public int getCounter() {
+		return counter;
+	}
+
+}
